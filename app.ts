@@ -2,9 +2,9 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import "express-async-errors";
 import dotenv from "dotenv";
-import { ConnectDB } from "./db/connect";
-import { notFound } from "./middlewares/notFoundMiddleWare";
-import { errorHandlerMiddleware } from "./middlewares/errorHandler";
+import { ConnectDB } from "./src/db/connect";
+import { notFound } from "./src/middlewares/notFoundMiddleWare";
+import { errorHandlerMiddleware } from "./src/middlewares/errorHandler";
 import cloudinary from "cloudinary";
 import fileUpload from "express-fileupload";
 dotenv.config();
@@ -16,7 +16,7 @@ cloudinary.v2.config({
 });
 
 // Routers
-import { authRouter } from "./routes";
+import { authRouter } from "./src/routes";
 
 // Middlewares
 const app = express();
@@ -42,7 +42,7 @@ const port = process.env.PORT || 3000;
 const mongoUrl: any = process.env.MONGO_URI;
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("LMS BACKEND");
+  res.send("Ts  BACKEND");
 });
 
 // Error handling middlewares
