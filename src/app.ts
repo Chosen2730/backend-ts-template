@@ -55,3 +55,7 @@ const start = async () => {
 };
 
 start();
+
+// Environment: Node
+// Build Command: npm ci; npm run build
+// Start Command: npm run start
