@@ -4,15 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
-    "build": "tsc",
     "start": "node dist/app.js",
-    "lint": "eslint . --ext .ts",
-    "test": "jest --watch",
-    "ts-node": "ts-node --transpileOnly ./src/index.ts",
-    "dev": "npx tsc && node dist/app.js",
-    "watch": "./node_modules/nodemon/bin/nodemon.js -e ts  --exec \"npm run start\"",
-    "build-ts": "npm run lint && tsc"
+    "dev": "nodemon app.ts --exec 'ts-node' --ignore 'dist/'",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
