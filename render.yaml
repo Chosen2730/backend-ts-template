@@ -1,0 +1,6 @@
+services:
+  - name: ts-backend
+    type: web
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
