@@ -49,7 +49,6 @@ app.get("/", (req: Request, res: Response) => {
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 const start = async () => {
-  // console.log(url);
   await ConnectDB(mongoUrl);
   app.listen(port, () => console.log(`App listening on port ${port}!`));
 };
